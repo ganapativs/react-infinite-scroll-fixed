@@ -9,11 +9,11 @@ Original Repo: https://github.com/guillaumervls/react-infinite-scroll
 
 ### [Browserify](https://github.com/substack/node-browserify) :
 ̀
-Install : `npm install react-infinite-scroll`
+Install : `npm install react-infinite-scroll-fixed`
 
 Then :
 ```javascript
-InfiniteScroll = require('react-infinite-scroll')(React);
+InfiniteScroll = require('react-infinite-scroll-fixed')(React);
 ```
 
 ### Also works with AMD (e.g [RequireJS](http://requirejs.org))
