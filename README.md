@@ -7,19 +7,6 @@ Demo: http://jsfiddle.net/mb9vJ/2
 
 # Getting started
 
-### Classic :
-
-The "ready to use" [script file](https://raw.github.com/guillaumervls/react-infinite-scroll/master/dist/react-infinite-scroll.min.js)
-is in the `dist` folder.
-
-Then :
-```html
-<script src='react-infinite-scroll.min.js'></script>
-<script>
-  var InfiniteScroll = React.addons.InfiniteScroll;
-</script>
-```
-
 ### [Browserify](https://github.com/substack/node-browserify) :
 ̀
 Install : `npm install react-infinite-scroll`
