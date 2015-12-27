@@ -1,6 +1,6 @@
 {
   "name": "react-infinite-scroll-fixed",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "React Infinite Scroll fixed for React v1.0+  =====================",
   "main": "src/react-infinite-scroll.js",
   "scripts": {
