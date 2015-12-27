@@ -2,8 +2,7 @@ React Infinite Scroll
 =====================
 
 *React infinite scroll component*
-
-Demo: http://jsfiddle.net/mb9vJ/2
+Original Repo: https://github.com/guillaumervls/react-infinite-scroll
 
 # Getting started
 
