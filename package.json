@@ -1,14 +1,14 @@
 {
-  "name": "react-infinite-scroll",
-  "version": "0.1.5",
-  "description": "",
+  "name": "react-infinite-scroll-fixed",
+  "version": "0.1.6",
+  "description": "React Infinite Scroll fixed for React v1.0+  =====================",
   "main": "src/react-infinite-scroll.js",
   "scripts": {
     "test": "grunt lint"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ganapativs/react-infinite-scroll.git"
+    "url": "git://github.com/ganapativs/react-infinite-scroll-fixed.git"
   },
   "keywords": [
     "infinite",
@@ -18,7 +18,7 @@
   "author": "ganapativs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ganapativs/react-infinite-scroll/issues"
+    "url": "https://github.com/ganapativs/react-infinite-scroll-fixed/issues"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -28,5 +28,8 @@
     "browserify": "~2.35.0",
     "grunt-browserify": "~1.2.9",
     "react-dom": "^0.14.3"
+  },
+  "directories": {
+    "example": "example"
   }
 }
