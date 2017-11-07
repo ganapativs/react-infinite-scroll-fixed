@@ -3,7 +3,7 @@ React Infinite Scroll Fixed
 
 [![Travis](https://img.shields.io/travis/ganapativs/react-infinite-scroll-fixed.svg?style=flat-square)](https://travis-ci.org/ganapativs/react-infinite-scroll-fixed)
 [![npm](https://img.shields.io/npm/dt/react-infinite-scroll-fixed.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroll-fixed)
-[![React Version](https://img.shields.io/badge/React-%5E0.14.9%20%7C%7C%20%5E15.3.0-blue.svg?style=flat-square)](https://www.npmjs.com/package/react)
+[![React Version](https://img.shields.io/badge/React-%5E16.0.0-blue.svg?style=flat-square)](https://www.npmjs.com/package/react)
 [![npm](https://img.shields.io/npm/v/react-infinite-scroll-fixed.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroll-fixed)
 [![npm](https://img.shields.io/npm/l/react-infinite-scroll-fixed.svg?style=flat-square)](https://github.com/ganapativs/react-infinite-scroll-fixed/blob/master/LICENSE)
 
