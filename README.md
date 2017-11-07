@@ -1,90 +1,73 @@
-React Infinite Scroll
-=====================
+React Infinite Scroller
+=======================
 
-*React infinite scroll component*
+[![Travis](https://img.shields.io/travis/CassetteRocks/react-infinite-scroller.svg?style=flat-square)](https://travis-ci.org/CassetteRocks/react-infinite-scroller)
+[![npm](https://img.shields.io/npm/dt/react-infinite-scroller.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroller)
+[![React Version](https://img.shields.io/badge/React-%5E0.14.9%20%7C%7C%20%5E15.3.0-blue.svg?style=flat-square)](https://www.npmjs.com/package/react)
+[![npm](https://img.shields.io/npm/v/react-infinite-scroller.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroller)
+[![npm](https://img.shields.io/npm/l/react-infinite-scroller.svg?style=flat-square)](https://github.com/CassetteRocks/react-infinite-scroller/blob/master/LICENSE)
 
-Original Repo: https://github.com/guillaumervls/react-infinite-scroll
+Infinitely load content using a React Component. This fork maintains a simple, lightweight infinite scroll package that supports both `window` and scrollable elements.
 
-# Getting started
+- [Demo](https://cassetterocks.github.io/react-infinite-scroller/demo/)
+- [Demo Source](https://github.com/CassetteRocks/react-infinite-scroller/blob/master/docs/src/index.js)
 
-### [Browserify](https://github.com/substack/node-browserify) :
-̀
-Install : `npm install react-infinite-scroll-fixed`
+## Installation
 
-Then :
-```javascript
-InfiniteScroll = require('react-infinite-scroll-fixed')(React);
+```
+npm install react-infinite-scroller --save
+```
+```
+yarn add react-infinite-scroller
 ```
 
-### Also works with AMD (e.g [RequireJS](http://requirejs.org))
+## How to use
 
-In this case, it will depend on `react`.
+```js
+import InfiniteScroll from 'react-infinite-scroller';
+```
 
+### Window scroll events
 
-# Use in JSX
-
-```html
+```js
 <InfiniteScroll
-    pageStart=0
+    pageStart={0}
     loadMore={loadFunc}
     hasMore={true || false}
-    loader={<div className="loader">Loading ...</div>}>
-  {items} // <-- This is the "stuff" you want to load
+    loader={<div className="loader">Loading ...</div>}
+>
+    {items} // <-- This is the content you want to load
 </InfiniteScroll>
 ```
 
-- `pageStart` : The page number corresponding to the initial `items`, defaults to `0`
-                which means that for the first loading, `loadMore` will be called with `1`
+### DOM scroll events
 
-- `loadMore(pageToLoad)` : This function is called when the user scrolls down
-                           and we need to load stuff
-
-- `hasMore` : Boolean stating if we should keep listening to scroll event and
-              trying to load more stuff
-
-- `loader` : Loader element to be displayed while loading stuff - You can use
-             `InfiniteScroll.setDefaultLoader(loader);` to set a defaut loader
-             for all your `InfiniteScroll` components
-
-- `threshold` : The distance between the bottom of the page and the bottom of the
-                window's viewport that triggers the loading of new stuff -
-                *Defaults to `250`*
-
-
-## Changelog
-
-### v0.1.0
-
-`loader` now takes a React component
-(no more component constructor or object `{component:... , props:... , ...}`).
-
-
-## (Re)build
-
-```
-npm install
-grunt dist
+```html
+<div style="height:700px;overflow:auto;">
+    <InfiniteScroll
+        pageStart={0}
+        loadMore={loadFunc}
+        hasMore={true || false}
+        loader={<div className="loader">Loading ...</div>}
+        useWindow={false}
+    >
+        {items}
+    </InfiniteScroll>
+</div>
 ```
 
-### Licence
+## Props
 
-**The MIT License (MIT)**
-
-*Copyright (c) 2015 ganapativs*
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+| Name             | Type          | Default    | Description|
+|:----             |:----          |:----       |:----|
+| `element`        | `String`      | `'div'`    | Name of the element that the component should render as.|
+| `hasMore`        | `Boolean`     | `false`    | Whether there are more items to be loaded. Event listeners are removed if `false`.|
+| `initialLoad`    | `Boolean`     | `true`     | Whether the component should load the first set of items.|
+| `isReverse`      | `Boolean`     | `false`    | Whether new items should be loaded when user scrolls to the top of the scrollable area.|
+| `loadMore`       | `Function`    |            | A callback when more items are requested by the user. Receives a single parameter specifying the page to load e.g. `function handleLoadMore(page) { /* load more items here */ }` }|
+| `loader`         | `Component`   |            | A React component to render while more items are loading.|
+| `pageStart`      | `Number`      | `0`        | The number of the first page to load, With the default of `0`, the first page is `1`.|
+| `threshold`      | `Number`     | `250`      | The distance in pixels before the end of the items that will trigger a call to `loadMore`.|
+| `useCapture`     | `Boolean`     | `false`     | Proxy to the `useCapture` option of the added event listeners.|
+| `useWindow`      | `Boolean`     | `true`     | Add scroll listeners to the window, if not, to the component's `parentNode` or `scrollParent`.|
+| `scrollParent`   | `Element`     | `null`     | Add scroll listeners to the some other parent element other than immediate parent node when `useWindow` is set to `false`.|
