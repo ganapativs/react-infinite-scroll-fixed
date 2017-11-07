@@ -7,7 +7,7 @@ React Infinite Scroll Fixed
 [![npm](https://img.shields.io/npm/v/react-infinite-scroll-fixed.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroll-fixed)
 [![npm](https://img.shields.io/npm/l/react-infinite-scroll-fixed.svg?style=flat-square)](https://github.com/ganapativs/react-infinite-scroll-fixed/blob/master/LICENSE)
 
-Infinitely load content using a React Component. This fork maintains a simple, lightweight infinite scroll package that supports both `window` and scrollable elements.
+Infinitely load content using a React Component. This fork maintains a simple, lightweight infinite scroll package that supports both `window` and scrollable elements. 
 
 - [Demo](https://ganapativs.github.io/react-infinite-scroll-fixed/demo/)
 - [Demo Source](https://github.com/ganapativs/react-infinite-scroll-fixed/blob/master/docs/src/index.js)
