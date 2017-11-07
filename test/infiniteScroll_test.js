@@ -1,8 +1,11 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { configure, mount } from 'enzyme';
 import { expect } from 'chai';
 import { stub, spy } from 'sinon';
+import Adapter from 'enzyme-adapter-react-16';
 import InfiniteScroll from '../src/InfiniteScroll';
+
+configure({ adapter: new Adapter() });
 
 describe('InfiniteScroll component', () => {
   it('should render', () => {
@@ -15,7 +18,7 @@ describe('InfiniteScroll component', () => {
       </div>
     );
 
-    const wrapper = mount(
+    const node = (
       <div>
         <InfiniteScroll
           pageStart={0}
@@ -26,8 +29,9 @@ describe('InfiniteScroll component', () => {
             {children}
           </div>
         </InfiniteScroll>
-      </div>,
+      </div>
     );
+    const wrapper = mount(node);
     expect(wrapper.find('.child-class').length).to.equal(3);
   });
 
@@ -41,7 +45,7 @@ describe('InfiniteScroll component', () => {
         <div className="child-class">3</div>
       </div>
     );
-    mount(
+    const node = (
       <div>
         <InfiniteScroll
           pageStart={0}
@@ -52,8 +56,9 @@ describe('InfiniteScroll component', () => {
             {children}
           </div>
         </InfiniteScroll>
-      </div>,
+      </div>
     );
+    mount(node);
     expect(InfiniteScroll.prototype.componentDidMount.callCount).to.equal(1);
     InfiniteScroll.prototype.componentDidMount.restore();
   });
@@ -69,7 +74,7 @@ describe('InfiniteScroll component', () => {
         <div className="child-class">3</div>
       </div>
     );
-    mount(
+    const node = (
       <div>
         <InfiniteScroll
           pageStart={0}
@@ -82,8 +87,9 @@ describe('InfiniteScroll component', () => {
             {children}
           </div>
         </InfiniteScroll>
-      </div>,
+      </div>
     );
+    mount(node);
     expect(InfiniteScroll.prototype.attachScrollListener.callCount).to.equal(1);
     expect(InfiniteScroll.prototype.scrollListener.callCount).to.equal(1);
     InfiniteScroll.prototype.attachScrollListener.restore();

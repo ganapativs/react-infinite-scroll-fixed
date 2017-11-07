@@ -1,30 +1,30 @@
-React Infinite Scroller
-=======================
+React Infinite Scroll Fixed
+===========================
 
-[![Travis](https://img.shields.io/travis/CassetteRocks/react-infinite-scroller.svg?style=flat-square)](https://travis-ci.org/CassetteRocks/react-infinite-scroller)
-[![npm](https://img.shields.io/npm/dt/react-infinite-scroller.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroller)
+[![Travis](https://img.shields.io/travis/ganapativs/react-infinite-scroll-fixed.svg?style=flat-square)](https://travis-ci.org/ganapativs/react-infinite-scroll-fixed)
+[![npm](https://img.shields.io/npm/dt/react-infinite-scroll-fixed.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroll-fixed)
 [![React Version](https://img.shields.io/badge/React-%5E0.14.9%20%7C%7C%20%5E15.3.0-blue.svg?style=flat-square)](https://www.npmjs.com/package/react)
-[![npm](https://img.shields.io/npm/v/react-infinite-scroller.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroller)
-[![npm](https://img.shields.io/npm/l/react-infinite-scroller.svg?style=flat-square)](https://github.com/CassetteRocks/react-infinite-scroller/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/v/react-infinite-scroll-fixed.svg?style=flat-square)](https://www.npmjs.com/package/react-infinite-scroll-fixed)
+[![npm](https://img.shields.io/npm/l/react-infinite-scroll-fixed.svg?style=flat-square)](https://github.com/ganapativs/react-infinite-scroll-fixed/blob/master/LICENSE)
 
 Infinitely load content using a React Component. This fork maintains a simple, lightweight infinite scroll package that supports both `window` and scrollable elements.
 
-- [Demo](https://cassetterocks.github.io/react-infinite-scroller/demo/)
-- [Demo Source](https://github.com/CassetteRocks/react-infinite-scroller/blob/master/docs/src/index.js)
+- [Demo](https://ganapativs.github.io/react-infinite-scroll-fixed/demo/)
+- [Demo Source](https://github.com/ganapativs/react-infinite-scroll-fixed/blob/master/docs/src/index.js)
 
 ## Installation
 
 ```
-npm install react-infinite-scroller --save
+npm install react-infinite-scroll-fixed --save
 ```
 ```
-yarn add react-infinite-scroller
+yarn add react-infinite-scroll-fixed
 ```
 
 ## How to use
 
 ```js
-import InfiniteScroll from 'react-infinite-scroller';
+import InfiniteScroll from 'react-infinite-scroll-fixed';
 ```
 
 ### Window scroll events

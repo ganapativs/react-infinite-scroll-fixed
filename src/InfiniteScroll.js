@@ -96,8 +96,8 @@ export default class InfiniteScroll extends Component {
     let offset;
     if (this.props.useWindow) {
       const scrollTop = (scrollEl.pageYOffset !== undefined) ?
-       scrollEl.pageYOffset :
-       (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        scrollEl.pageYOffset :
+        (document.documentElement || document.body.parentNode || document.body).scrollTop;
       if (this.props.isReverse) {
         offset = scrollTop;
       } else {
@@ -142,6 +142,7 @@ export default class InfiniteScroll extends Component {
       threshold,
       useCapture,
       useWindow,
+      scrollParent,
       ...props
     } = this.props;
 
@@ -163,9 +164,9 @@ export default class InfiniteScroll extends Component {
       }
     }
     return React.createElement(
-        element,
-        props,
-        ...childrenArray,
+      element,
+      props,
+      ...childrenArray,
     );
   }
 }
